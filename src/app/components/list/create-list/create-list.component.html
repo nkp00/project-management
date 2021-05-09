@@ -1,0 +1,16 @@
+<div class="list-container">
+  <div class="title">
+    <h5>{{ list.title }}</h5>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="removeList()"
+    ></button>
+  </div>
+  <hr />
+  <div class="cards" *ngFor="let card of list.cards" [list]="list">
+    <app-card [cardDetail]="card" [listId]="list.id" cdkDrag></app-card>
+  </div>
+  <button class="btn btn-secondary add" (click)="openDialog()">Add</button>
+</div>

@@ -1,0 +1,31 @@
+nav {
+  background-color: rgb(245, 199, 199);
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+nav h3 {
+  text-align: center;
+}
+
+.container {
+  padding: 0px 10px;
+  width: 100%;
+}
+
+button {
+  float: right;
+}
+.addButton {
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.lists {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.m2 {
+  margin-bottom: 10px;
+}

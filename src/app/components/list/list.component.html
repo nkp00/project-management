@@ -1,0 +1,16 @@
+<div cdkDropListGroup>
+  <div class="conatiner">
+    <div class="list">
+      <div *ngFor="let list of lists">
+        <div
+          class="test"
+          cdkDropList
+          [cdkDropListData]="list.cards"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <app-create-list [list]="list"></app-create-list>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

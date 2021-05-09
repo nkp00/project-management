@@ -1,0 +1,12 @@
+.actions {
+  width: 100%;
+}
+
+.okay {
+  float: right;
+  margin-left: 320px;
+}
+
+.close {
+  float: left;
+}

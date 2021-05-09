@@ -1,0 +1,44 @@
+<form>
+  <div class="form-group">
+    <!-- <label for="exampleInputEmail1">Title</label> -->
+    <input
+      type="text"
+      name="title"
+      class="form-control"
+      id="exampleInputEmail1"
+      [ngStyle]="inputClass"
+      aria-describedby="emailHelp"
+      placeholder="Enter Title"
+      [(ngModel)]="title"
+      required="true"
+    />
+  </div>
+
+  <div class="form-group" *ngIf="isCard">
+    <!-- <label for="exampleInputEmail1">Title</label> -->
+    <input
+      type="text"
+      name="desc"
+      [ngStyle]="inputClass"
+      class="form-control"
+      id="desc"
+      aria-describedby="emailHelp"
+      placeholder="Enter desc"
+      [(ngModel)]="desc"
+    />
+  </div>
+</form>
+
+<div mat-dialog-actions class="actions">
+  <button mat-button mat-dialog-close class="btn btn-secondary close">
+    Cancel
+  </button>
+  <button
+    mat-button
+    mat-dialog-close
+    [mat-dialog-close]="[title, desc]"
+    class="btn btn-primary okay"
+  >
+    Add
+  </button>
+</div>

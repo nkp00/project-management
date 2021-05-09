@@ -1,0 +1,11 @@
+<div class="container">
+  <nav><h3>Trello Board</h3></nav>
+  <div class="addButton">
+    <button class="btn btn-primary" mat-raised-button (click)="openDialog()">
+      ADD LIST
+    </button>
+  </div>
+  <div class="lists">
+    <app-list [lists]="lists"></app-list>
+  </div>
+</div>

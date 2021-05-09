@@ -1,0 +1,30 @@
+.card-title {
+  margin: 10px auto;
+  width: 90%;
+  min-height: 80px;
+  height: auto;
+  border: 0.5px solid rgb(184, 172, 184);
+  overflow-y: auto;
+  border-radius: 3px;
+  background-color: rgb(212, 212, 212);
+}
+.title {
+  font-weight: 500;
+  padding: 3px;
+}
+
+p {
+  float: left;
+  width: 80%;
+  padding-left: 8px;
+}
+
+button {
+  float: right;
+  font-size: 12px;
+}
+
+.description {
+  word-wrap: break-word;
+  padding: 0 3px;
+}
