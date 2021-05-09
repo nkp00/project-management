@@ -14,9 +14,12 @@
       [(ngModel)]="title"
       required
     />
+    <i class="text-danger" *ngIf="atitle.invalid && atitle.touched">
+      Title is required</i
+    >
   </div>
   {{ listForm.title }}
-  <div class="form-group" *ngIf="isCard">
+  <div class="form-group mt-4" *ngIf="isCard">
     <label for="desc">Description</label>
     <input
       #adesc="ngModel"
@@ -31,6 +34,9 @@
       [(ngModel)]="desc"
       required
     />
+    <i class="text-danger" *ngIf="adesc.invalid && adesc.touched">
+      Description is required</i
+    >
   </div>
 
   <div mat-dialog-actions class="actions">
