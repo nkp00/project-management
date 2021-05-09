@@ -1,6 +1,6 @@
 .card-title {
   margin: 10px auto;
-  width: 90%;
+  width: 200px;
   min-height: 80px;
   height: auto;
   border: 0.5px solid rgb(184, 172, 184);
@@ -11,6 +11,8 @@
 .title {
   font-weight: 500;
   padding: 3px;
+  width: 100%;
+  overflow-wrap: break-word;
 }
 
 p {

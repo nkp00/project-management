@@ -64,8 +64,8 @@ export class ListServiceService {
   openDialogService(dialogObj) {
     let dialogRef = this.dialog.open(InputDialogComponent, {
       panelClass: 'okay',
-      height: '400px',
-      width: '500px',
+      height: '450px',
+      width: '550px',
       data: { type: dialogObj.type, class: { marginBottom: '20px' } },
     });
 
