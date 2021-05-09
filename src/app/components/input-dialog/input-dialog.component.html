@@ -1,23 +1,27 @@
-<form>
+<form #listForm="ngForm">
   <div class="form-group">
-    <!-- <label for="exampleInputEmail1">Title</label> -->
+    <label for="#titleInput">Title</label>
     <input
       type="text"
+      #atitle="ngModel"
       name="title"
       class="form-control"
-      id="exampleInputEmail1"
+      id="titleInput"
+      [class.is-invalid]="atitle.invalid && atitle.touched"
       [ngStyle]="inputClass"
       aria-describedby="emailHelp"
       placeholder="Enter Title"
       [(ngModel)]="title"
-      required="true"
+      required
     />
   </div>
-
+  {{ listForm.title }}
   <div class="form-group" *ngIf="isCard">
-    <!-- <label for="exampleInputEmail1">Title</label> -->
+    <label for="desc">Description</label>
     <input
+      #adesc="ngModel"
       type="text"
+      [class.is-invalid]="adesc.invalid && adesc.touched"
       name="desc"
       [ngStyle]="inputClass"
       class="form-control"
@@ -25,20 +29,23 @@
       aria-describedby="emailHelp"
       placeholder="Enter desc"
       [(ngModel)]="desc"
+      required
     />
   </div>
-</form>
 
-<div mat-dialog-actions class="actions">
-  <button mat-button mat-dialog-close class="btn btn-secondary close">
-    Cancel
-  </button>
-  <button
-    mat-button
-    mat-dialog-close
-    [mat-dialog-close]="[title, desc]"
-    class="btn btn-primary okay"
-  >
-    Add
-  </button>
-</div>
+  <div mat-dialog-actions class="actions">
+    <button mat-button mat-dialog-close class="btn btn-secondary close">
+      Cancel
+    </button>
+    <button
+      type="submit"
+      mat-button
+      mat-dialog-close
+      [mat-dialog-close]="[title, desc]"
+      class="btn btn-primary okay"
+      [disabled]="listForm.invalid"
+    >
+      Add
+    </button>
+  </div>
+</form>
